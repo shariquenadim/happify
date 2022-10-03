@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Happify-A platform for Sleep, Stress, Meditation & Relax</title>
+    <title>Dashboard | Happify</title>
     <!-- <meta name="robots" content="noindex, follow" /> -->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="assets/css/plugins/feature.css">
     <!-- Style css -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--js-->
+    <script src="assets/js/auth.js"></script>
 </head>
 
 <body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
@@ -47,8 +50,8 @@
                     <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block">
                         <!-- Start Mainmanu Nav -->
                         <ul class="primary-menu nav nav-pills">
-                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
                         </ul>
                         <!-- End Mainmanu Nav -->
                     </nav>
@@ -88,8 +91,8 @@
             </div>
             <div class="content">
                 <ul class="primary-menu nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 </ul>
                 <br/>
                 <a class="rn-btn" target="_blank" href="signup.html"><span>Sign Up</span></a>
@@ -138,77 +141,16 @@
         <div id="home" class="rn-slider-area">
             <div class="slide slider-style-1">
                 <div class="container">
-                    <div class="row row--30 align-items-center">
-                        <div class="order-2 order-lg-1 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30">
-                            <div class="content">
-                                <div class="inner">
-                                    <span class="subtitle">Welcome to Happify World</span>
-                                    <h1 class="title">Your <span>personal</span><br>
-                                        <span class="header-caption" id="page-top">
-                                            <!-- type headline start-->
-                                            <span class="cd-headline clip is-full-width">
-                                                <span>space for</span>
-                                                <!-- ROTATING TEXT -->
-                                                <span class="cd-words-wrapper">
-                                                    <b class="is-hidden">relaxation.</b>
-                                                    <b class="is-visible">stress relief.</b>
-                                                    <b class="is-hidden">calmness.</b>
-                                                </span>
-                                            </span>
-                                            <!-- type headline end -->
-                                        </span>
-                                    </h1>
-
-                                    <br/><br/>
-                                    <div>
-                                        <span class="subtitle"><strong>What can we help with today?</strong></span>
-                                        <a href="" class="rn-btn d-block">
-                                            <span>Improve Sleep Quality</span>
-                                        </a><br/>
-                                        <a href="" class="rn-btn d-block">
-                                            <span>Reduce Stress & Anxiety</span>
-                                        </a><br/>
-                                        <a href="" class="rn-btn d-block">
-                                            <span>Improve Focus</span>
-                                        </a><br/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
-                                        <div class="social-share-inner-left">
-                                            <span class="title">find us on</span>
-                                            <ul class="social-share d-flex liststyle">
-                                                <li class="facebook"><a href="#"><i data-feather="facebook"></i></a>
-                                                </li>
-                                                <li class="instagram"><a href="#"><i data-feather="instagram"></i></a>
-                                                </li>
-                                                <li class="linkedin"><a href="#"><i data-feather="linkedin"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12 mt_mobile--30">
-                                        <div class="skill-share-inner">
-                                            <span class="title">Best Features</span>
-                                            <ul class="skill-share d-flex liststyle">
-                                                <li><img src="assets/images/icons/location.png" alt="Icons Images"></li>
-                                                <li><img src="assets/images/icons/music.png" alt="Icons Images"></li>
-                                                <li><img src="assets/images/icons/yoga.png" alt="Icons Images"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="order-1 order-lg-2 col-lg-5">
-                            <div class="thumbnail">
-                                <div class="inner">
-                                    <img src="assets/images/3d/Saly-13.png" alt="Personal Portfolio Images">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h1 style="color: black;">Patient Name: <span id="name">name</span></h1><br>
+                    <script>
+                        var name = localStorage.getItem("name");
+                        document.getElementById("name").innerHTML = name;
+                    </script>
+                    <h2 style="color: black;">Patient Email: <span id="email">mail</span></h2><br>
+                    <script>
+                        var email = localStorage.getItem("mail");
+                        document.getElementById("email").innerHTML = email;
+                    </script>
                 </div>
             </div>
         </div>
@@ -240,7 +182,7 @@
                         <p class="description mt--30">&#169; <a target="_blank" href="">Happify</a>
                             <script>
                                 document.write(new Date().getFullYear());
-                            </script>
+                            </scrip>
                         </p>
                     </div>
                 </div>
