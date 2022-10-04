@@ -35,24 +35,40 @@ function store(){
         localStorage.setItem('name', name.value);
         localStorage.setItem('mail', mail.value);
         localStorage.setItem('pw', pw.value);
+        localStorage.setItem('token', 1);
         window.location.href = "dashboard.html";
     }
 }
 
+//varify
+function varify(){
+    var token = localStorage.getItem('token');
+    if(token == 1){
+        window.location.href = "dashboard.html";
+    }else{
+        window.location.href = "login.html";
+    }
+}
 
-// login
+ // login
 function check(){
     var storedName = localStorage.getItem('mail');
     var storedPw = localStorage.getItem('pw');
+    
 
     var userName = document.getElementById('usrmail');
     var userPw = document.getElementById('usrpw');
 
     if(userName.value == storedName && userPw.value == storedPw){
         window.location.href = "dashboard.html";
+        localStorage.setItem('token', 1);
     }else{
         alert('You are not registered or Wrong Credintials');
     }
 }
 
-//dashboard
+//logout
+function logout(){
+    localStorage.setItem('token', 0);
+    window.location.href = "index.html";
+}

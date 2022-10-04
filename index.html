@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="assets/css/plugins/feature.css">
     <!-- Style css -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--js-->
+    <script src="assets/js/auth.js"></script>
 </head>
 
 <body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
@@ -48,7 +51,7 @@
                         <!-- Start Mainmanu Nav -->
                         <ul class="primary-menu nav nav-pills">
                             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                            <li class="nav-item"><a class="nav-link" onclick="varify()">Log In</a></li>
                         </ul>
                         <!-- End Mainmanu Nav -->
                     </nav>
@@ -88,7 +91,7 @@
             </div>
             <div class="content">
                 
-                <a class="rn-btn" href="login.html"><span>Log In</span></a>
+                <a class="rn-btn" onclick="varify()"><span>Log In</span></a>
                 <br/>
                 <a class="rn-btn" target="_blank" href="signup.html"><span>Sign Up</span></a>
                 <!-- social sharea area -->
