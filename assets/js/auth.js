@@ -72,3 +72,14 @@ function logout(){
     localStorage.setItem('token', 0);
     window.location.href = "index.html";
 }
+
+//adminauth
+function adminauth(){
+    var id = document.getElementById('docid');
+    var pw = document.getElementById('docpw');
+    if(id.value == 12345 && pw.value == "admin"){
+        window.location.href = "admin.html";
+    }else{
+        alert('Wrong Credintials');
+    }
+}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Doctor's Portal | Happify</title>
+    <!-- <meta name="robots" content="noindex, follow" /> -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#249ece">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favi.png">
+
+    <!-- CSS 
+    ============================================ -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/slick.css">
+    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/vendor/aos.css">
+    <link rel="stylesheet" href="assets/css/plugins/feature.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- js -->
+    <script src="assets/js/auth.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .formful {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .happify-div {
+
+            width: 430px;
+            height: 550px;
+
+            padding: 20px 35px 15px 35px;
+            border-radius: 35px;
+            background: #ecf0f3;
+
+            box-shadow:
+                -6px -6px 6px rgba(255, 255, 255, 0.8),
+                6px 6px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .happify-logo {
+            background: url("assets/images/head.png") no-repeat;
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+
+            box-shadow: 0px 0px 2px #5f5f5f,
+                0px 0px 0px 5px #ecf0f3,
+                8px 8px 15px #a7aaaf,
+                -8px -8px 15px #ffffff;
+        }
+
+        .happify-title {
+            text-align: center;
+            font-size: 28px;
+            padding-top: 24px;
+            letter-spacing: 0.5px;
+            color: #3ecddb;
+        }
+
+        .happify-sub-title {
+            text-align: center;
+            font-size: 15px;
+            padding-top: 7px;
+            letter-spacing: 3px;
+            color: #2e9cdb;
+        }
+
+        .happify-input-fields {
+            width: 100%;
+            padding: 20px 5px 10px 5px;
+        }
+
+        .happify-input-fields input {
+
+            border: none;
+            outline: none;
+
+            background: none;
+            font-size: 18px;
+            color: #555;
+            padding: 15px 10px 15px 5px;
+        }
+
+        .happify-name,
+        .happify-email,
+        .happify-password {
+            margin-bottom: 20px;
+            border-radius: 20px;
+
+            box-shadow: inset 5px 5px 5px #cbced1,
+                inset -5px -5px 5px #ffffff;
+        }
+
+        .happify-input-fields svg {
+            height: 22px;
+            margin: 0 10px -3px 25px;
+        }
+
+        .happify-button {
+
+            outline: none;
+            border: none;
+
+            cursor: pointer;
+            width: 100%;
+            height: 60px;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: "Lato", sans-serif;
+            color: #151515;
+            text-align: center;
+            background: #ecf0f3;
+            box-shadow: 7px 7px 8px #cbced1,
+                -7px -7px 8px #ffffff;
+            transition: 0.5s;
+        }
+
+        .happify-button:hover {
+            color: #e8ebef;
+            background: linear-gradient(to right bottom, #3ecddb, #2e9cdb);
+        }
+
+        .happify-button:active {
+            background: linear-gradient(to right bottom, #3ecddb, #2e9cdb);
+        }
+
+        .happify-link {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .happify-link a {
+            text-decoration: none;
+            color: #3ecddb;
+            font-size: 15px;
+            transition: 0.5s;
+        }
+
+        .happify-link a:hover {
+            text-decoration: none;
+            color: #3ecddb;
+            font-size: 15px;
+        }
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+
+<body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
+
+    <!-- Start Header -->
+    <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
+        <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
+            <!-- Start Header Left -->
+            <div class="col-lg-2 col-6">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/head.png" alt="happify logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Left -->
+            <!-- Start Header Center -->
+            <div class="col-lg-10 col-6">
+                <div class="header-center">
+                    <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block">
+                        <!-- Start Mainmanu Nav -->
+                        <ul class="primary-menu nav nav-pills">
+                            <!-- <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="login.html">Log In</a></li> -->
+                        </ul>
+                        <!-- End Mainmanu Nav -->
+                    </nav>
+                    <!-- Start Header Right  -->
+                    <div class="header-right">
+                        <a class="rn-btn" href="index.html" target="_blank"><span>Home</span></a>
+                        <div class="hamberger-menu d-block d-xl-none">
+                            <i id="menuBtn" class="feather-menu humberger-menu"></i>
+                        </div>
+                        <div class="close-menu d-block">
+                            <span class="closeTrigger">
+                                <i data-feather="x"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- End Header Right  -->
+
+                </div>
+            </div>
+            <!-- End Header Center -->
+        </div>
+    </header>
+    <!-- End Header Area -->
+    <!-- Start Popup Mobile Menu  -->
+    <div class="popup-mobile-menu">
+        <div class="inner">
+            <div class="menu-top">
+                <div class="menu-header">
+                    <a class="logo" href="index.html">
+                        <img src="assets/images/head.png" alt="Happify Logo">
+                    </a>
+                    <div class="close-button">
+                        <button class="close-menu-activation close"><i data-feather="x"></i></button>
+                    </div>
+                </div>
+                <p class="discription"><strong>Happify</strong> - Admin Portal</p>
+            </div>
+            <div class="content">
+                <a class="rn-btn" href="index.html"><span>Home</span></a>
+                <!-- <br/>
+                <a class="rn-btn" target="_blank" href="signup.html"><span>Sign Up</span></a> -->
+                <!-- social sharea area -->
+                <div class="social-share-style-1 mt--40">
+                    <span class="title">find us on</span>
+                    <ul class="social-share d-flex liststyle">
+                        <li class="facebook"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg></a>
+                        </li>
+                        <li class="instagram"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg></a>
+                        </li>
+                        <li class="linkedin"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+    </div>
+    <!-- End Popup Mobile Menu  -->
+
+
+
+
+    <main class="main-page-wrapper">
+
+        <!-- Start Slider Area -->
+        <div id="signup" class="rn-slider-area">
+            <div class="slide slider-style-1">
+                <div class="formful">
+                    <div class="happify-div">
+                        <div class="happify-logo"></div>
+                        <div class="happify-title">Happify</div>
+                        <div class="happify-sub-title">
+                            Admin Portal
+                        </div>
+                        <div class="happify-input-fields">
+                            <div class="happify-email">
+                                <input type="number" id="docid" placeholder="admin id" min="3" max="5" required />
+                            </div>
+                            <div class="happify-password">
+                                <input type="password" id="docpw" placeholder="password" required />
+                            </div>
+                        </div>
+                        <button class="happify-button" id="login_btn" type="submit" value="Login" onclick="adminauth()">Log
+                            In</button>
+                        <div class="happify-link">
+                            <a href="#">Forgot Password</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Slider Area -->
+
+        <!-- Back to  top Start -->
+        <div class="backto-top">
+            <div>
+                <i data-feather="arrow-up"></i>
+            </div>
+        </div>
+        <!-- Back to top end -->
+
+
+
+    </main>
+
+    <!-- Start Footer Area -->
+    <div class="rn-footer-area rn-section-gap section-separator">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-area text-center">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/images/head.png" alt="logo">
+                            </a>
+                        </div>
+                        <p class="description mt--30">&#169; <a target="_blank" href="">Happify</a>
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Area -->
+
+    <!-- JS ============================================ -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/modernizer.min.js"></script>
+    <script src="assets/js/vendor/feather.min.js"></script>
+    <script src="assets/js/vendor/slick.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.js"></script>
+    <script src="assets/js/vendor/text-type.js"></script>
+    <script src="assets/js/vendor/wow.js"></script>
+    <script src="assets/js/vendor/aos.js"></script>
+    <script src="assets/js/vendor/particles.js"></script>
+    <!-- main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
