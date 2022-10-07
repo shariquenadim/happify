@@ -163,9 +163,9 @@ function optionSelected(answer){
 }
 
 function showResult(){
-    // console.log(anxietyscore);
-    // console.log(depressionscore);
-    // console.log(stressscore);
+    console.log(anxietyscore);
+    console.log(depressionscore);
+    console.log(stressscore);
 
     anxietyscore=anxietyscore*2;
     depressionscore=depressionscore*2;
