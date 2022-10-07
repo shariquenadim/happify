@@ -166,11 +166,17 @@ function showResult(){
     console.log(anxietyscore);
     console.log(depressionscore);
     console.log(stressscore);
+    
+    
 
     anxietyscore=anxietyscore*2;
     depressionscore=depressionscore*2;
     stressscore=stressscore*2;
     
+    localStorage.setItem("anxietyscore",anxietyscore);
+    localStorage.setItem("depressionscore",depressionscore);
+    localStorage.setItem("stressscore",stressscore);
+
 
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
