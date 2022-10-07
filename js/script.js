@@ -1,3 +1,13 @@
+let stressscore=0;
+let depressionscore=0;
+let anxietyscore=0;
+
+zero = "Did not apply to me at all";
+one ="Applied to me to some degree, or some of the time";
+two="Applied to me to a considerable degree or a good part of time";
+three= "Applied to me very much or most of the time";
+
+
 //selecting all required elements
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
@@ -95,36 +105,73 @@ function optionSelected(answer){
     // clearInterval(counter); //clear counter
     // clearInterval(counterLine); //clear counterLine
     let userAns = answer.textContent; //getting user selected option
-    let correcAns = questions[que_count].answer; //getting correct answer from array
+    let score=0;
+    if(userAns==zero){
+        score=0;
+    }
+    else if(userAns==one){
+        score=1;
+    }
+    else if(userAns==two){
+        score=2;
+    }
+    else if(userAns==three){
+        score=3;
+    }
+    //let correcAns = questions[que_count].answer; //getting correct answer from array
+
+    // getting question type
+    let questiontype=questions[que_count].type;
+
+    if(questiontype=="stress"){
+        stressscore=stressscore+score;
+    }
+    else if(questiontype=="anexity"){
+        anxietyscore=anxietyscore+score;
+    }
+    else if(questiontype=="depression"){
+        depressionscore=depressionscore+score;
+    }
+
     const allOptions = option_list.children.length; //getting all option items
     
-    if(userAns == correcAns){ //if user selected option is equal to array's correct answer
-        userScore += 1; //upgrading score value with 1
-        answer.classList.add("correct"); //adding green color to correct selected option
-        answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
-        console.log("Correct Answer");
-        console.log("Your correct answers = " + userScore);
-    }else{
-        answer.classList.add("incorrect"); //adding red color to correct selected option
-        answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
-        console.log("Wrong Answer");
+    // if(userAns == correcAns){ //if user selected option is equal to array's correct answer
+    //     userScore += 1; //upgrading score value with 1
+    //     answer.classList.add("correct"); //adding green color to correct selected option
+    //     answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
+    //     console.log("Correct Answer");
+    //     console.log("Your correct answers = " + userScore);
+    // }else{
+    //     answer.classList.add("incorrect"); //adding red color to correct selected option
+    //     answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
+    //     console.log("Wrong Answer");
 
-        for(i=0; i < allOptions; i++){
-            if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer 
-                option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
-                option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
-                console.log("Auto selected correct answer.");
-            }
-        }
-    }
+    //     for(i=0; i < allOptions; i++){
+    //         if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer 
+    //             option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
+    //             option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
+    //             console.log("Auto selected correct answer.");
+    //         }
+    //     }
+    // }
+
     for(i=0; i < allOptions; i++){
         option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
     }
-   
+
     nextquestion();
 }
 
 function showResult(){
+    // console.log(anxietyscore);
+    // console.log(depressionscore);
+    // console.log(stressscore);
+
+    anxietyscore=anxietyscore*2;
+    depressionscore=depressionscore*2;
+    stressscore=stressscore*2;
+    
+
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box

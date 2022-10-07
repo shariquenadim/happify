@@ -9,121 +9,110 @@ let answers= [
 let questions = [
     {
     numb: 1,
+    type: "stress",
     question: "I found it hard to wind down ",
-    answer: "Hyper Text Markup Language",
-    options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language"
-    ]
   },
     {
     numb: 2,
+    type: "anexity",
     question: "I was aware of dryness of my mouth",
-    answer: "Cascading Style Sheet",
-    options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
-    ]
   },
     {
     numb: 3,
+    type: "depression",
     question: "I couldn’t seem to experience any positive feeling at all ",
-    answer: "Hypertext Preprocessor",
-    options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
-    ]
+  
   },
     {
     numb: 4,
+    type: "anexity",
     question: "I experienced breathing difficulty (e.g. excessively rapid breathing, breathlessness in the absence of physical exertion)",
-    answer: "Structured Query Language",
-    options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
-    ]
+    
   },
     {
     numb: 5,
+    type: "depression",
     question: "I found it difficult to work up the initiative to do things ",
-    answer: "eXtensible Markup Language",
-    options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
-    ]
+    
   },
     {
     numb: 6,
+    type: "stress",
     question: "I tended to over-react to situations",
   },
     {
     numb: 7,
+    type: "anexity",
     question: "I experienced trembling (e.g. in the hands)",
   },
     {
     numb: 8,
+    type: "stress",
     question: "I felt that I was using a lot of nervous energy",
   },
     {
     numb: 9,
+    type: "anexity",
     question: "I was worried about situations in which I might panic and make a fool of myself",
   },
     {
     numb: 10,
+    type: "depression",
     question: "I felt that I had nothing to look forward to",
   },
     {
     numb: 11,
+    type: "stress",
     question: "I found myself getting agitated",
   },
     {
     numb: 12,
+    type: "stress",
     question: "I found it difficult to relax",
   },
     {
     numb: 13,
+    type: "depression",
     question: "I felt down-hearted and blue",
   },
     {
     numb: 14,
+    type: "stress",
     question: "I was intolerant of anything that kept me from getting on with what I was doing ",
   },
     {
     numb: 15,
+    type: "anexity",
     question: "I felt I was close to panic",
   },
     {
     numb: 16,
+    type: "depression",
     question: "I was unable to become enthusiastic about anything ",
   },
     {
     numb: 17,
+    type: "depression",
     question: "I felt I wasn’t worth much as a person ",
   },
     {
     numb: 18,
+    type: "stress",
     question: "I felt that I was rather touchy ",
   },
     {
     numb: 19,
+    type: "anexity",
     question: "I was aware of the action of my heart in the absence of physical exertion (e.g. sense of heart rate increase, heart missing a beat)",
   },
     {
     numb: 20,
+    type: "anexity",
     question: "I felt scared without any good reason",
   },
     {
     numb: 21,
+    type: "depression",
     question: "I felt that life was meaningless",
   },
   
