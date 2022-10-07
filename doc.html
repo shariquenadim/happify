@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Happify-A platform for Sleep, Stress, Meditation & Relax</title>
+    <title>Doctor's Portal | Happify</title>
     <!-- <meta name="robots" content="noindex, follow" /> -->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,8 +24,160 @@
     <!-- Style css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!--js-->
+    <!-- js -->
     <script src="assets/js/auth.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .formful {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .happify-div {
+
+            width: 430px;
+            height: 550px;
+
+            padding: 20px 35px 15px 35px;
+            border-radius: 35px;
+            background: #ecf0f3;
+
+            box-shadow:
+                -6px -6px 6px rgba(255, 255, 255, 0.8),
+                6px 6px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .happify-logo {
+            background: url("assets/images/head.png") no-repeat;
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+
+            box-shadow: 0px 0px 2px #5f5f5f,
+                0px 0px 0px 5px #ecf0f3,
+                8px 8px 15px #a7aaaf,
+                -8px -8px 15px #ffffff;
+        }
+
+        .happify-title {
+            text-align: center;
+            font-size: 28px;
+            padding-top: 24px;
+            letter-spacing: 0.5px;
+            color: #3ecddb;
+        }
+
+        .happify-sub-title {
+            text-align: center;
+            font-size: 15px;
+            padding-top: 7px;
+            letter-spacing: 3px;
+            color: #2e9cdb;
+        }
+
+        .happify-input-fields {
+            width: 100%;
+            padding: 20px 5px 10px 5px;
+        }
+
+        .happify-input-fields input {
+
+            border: none;
+            outline: none;
+
+            background: none;
+            font-size: 18px;
+            color: #555;
+            padding: 15px 10px 15px 5px;
+        }
+
+        .happify-name,
+        .happify-email,
+        .happify-password {
+            margin-bottom: 20px;
+            border-radius: 20px;
+
+            box-shadow: inset 5px 5px 5px #cbced1,
+                inset -5px -5px 5px #ffffff;
+        }
+
+        .happify-input-fields svg {
+            height: 22px;
+            margin: 0 10px -3px 25px;
+        }
+
+        .happify-button {
+
+            outline: none;
+            border: none;
+
+            cursor: pointer;
+            width: 100%;
+            height: 60px;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: "Lato", sans-serif;
+            color: #151515;
+            text-align: center;
+            background: #ecf0f3;
+            box-shadow: 7px 7px 8px #cbced1,
+                -7px -7px 8px #ffffff;
+            transition: 0.5s;
+        }
+
+        .happify-button:hover {
+            color: #e8ebef;
+            background: linear-gradient(to right bottom, #3ecddb, #2e9cdb);
+        }
+
+        .happify-button:active {
+            background: linear-gradient(to right bottom, #3ecddb, #2e9cdb);
+        }
+
+        .happify-link {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .happify-link a {
+            text-decoration: none;
+            color: #3ecddb;
+            font-size: 15px;
+            transition: 0.5s;
+        }
+
+        .happify-link a:hover {
+            text-decoration: none;
+            color: #3ecddb;
+            font-size: 15px;
+        }
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
 </head>
 
 <body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
@@ -50,14 +202,14 @@
                     <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block">
                         <!-- Start Mainmanu Nav -->
                         <ul class="primary-menu nav nav-pills">
-                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" onclick="varify()" style="cursor: pointer;">Log In</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="login.html">Log In</a></li> -->
                         </ul>
                         <!-- End Mainmanu Nav -->
                     </nav>
                     <!-- Start Header Right  -->
                     <div class="header-right">
-                        <a class="rn-btn" target="_blank" href="signup.html"><span>Sign Up</span></a>
+                        <a class="rn-btn" href="index.html" target="_blank"><span>Home</span></a>
                         <div class="hamberger-menu d-block d-xl-none">
                             <i id="menuBtn" class="feather-menu humberger-menu"></i>
                         </div>
@@ -87,13 +239,12 @@
                         <button class="close-menu-activation close"><i data-feather="x"></i></button>
                     </div>
                 </div>
-                <p class="discription"><strong>Happify</strong> - Your personal space for relaxing.</p>
+                <p class="discription"><strong>Happify</strong> - Admin Portal</p>
             </div>
             <div class="content">
-                
-                <a class="rn-btn" onclick="varify()" style="cursor: pointer;"><span>Log In</span></a>
-                <br/>
-                <a class="rn-btn" target="_blank" href="signup.html"><span>Sign Up</span></a>
+                <a class="rn-btn" href="index.html"><span>Home</span></a>
+                <!-- <br/>
+                <a class="rn-btn" target="_blank" href="signup.html"><span>Sign Up</span></a> -->
                 <!-- social sharea area -->
                 <div class="social-share-style-1 mt--40">
                     <span class="title">find us on</span>
@@ -136,78 +287,39 @@
     <main class="main-page-wrapper">
 
         <!-- Start Slider Area -->
-        <div id="home" class="rn-slider-area">
+        <div id="signup" class="rn-slider-area">
             <div class="slide slider-style-1">
-                <div class="container">
-                    <div class="row row--30 align-items-center">
-                        <div class="order-2 order-lg-1 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30">
-                            <div class="content">
-                                <div class="inner">
-                                    <span class="subtitle">Welcome to Happify World</span>
-                                    <h1 class="title">Your <span>personal</span><br>
-                                        <span class="header-caption" id="page-top">
-                                            <!-- type headline start-->
-                                            <span class="cd-headline clip is-full-width">
-                                                <span>space for</span>
-                                                <!-- ROTATING TEXT -->
-                                                <span class="cd-words-wrapper">
-                                                    <b class="is-hidden">relaxation.</b>
-                                                    <b class="is-visible">stress relief.</b>
-                                                    <b class="is-hidden">calmness.</b>
-                                                </span>
-                                            </span>
-                                            <!-- type headline end -->
-                                        </span>
-                                    </h1>
-
-                                    <br/><br/>
-                                    <div>
-                                        <span class="subtitle"><strong>What can we help with today?</strong></span>
-                                        <a href="" class="rn-btn d-block">
-                                            <span>Improve Sleep Quality</span>
-                                        </a><br/>
-                                        <a href="" class="rn-btn d-block">
-                                            <span>Reduce Stress & Anxiety</span>
-                                        </a><br/>
-                                        <a href="" class="rn-btn d-block">
-                                            <span>Improve Focus</span>
-                                        </a><br/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
-                                        <div class="social-share-inner-left">
-                                            <span class="title">find us on</span>
-                                            <ul class="social-share d-flex liststyle">
-                                                <li class="facebook"><a href="#"><i data-feather="facebook"></i></a>
-                                                </li>
-                                                <li class="instagram"><a href="#"><i data-feather="instagram"></i></a>
-                                                </li>
-                                                <li class="linkedin"><a href="#"><i data-feather="linkedin"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12 mt_mobile--30">
-                                        <div class="skill-share-inner">
-                                            <span class="title">Best Features</span>
-                                            <ul class="skill-share d-flex liststyle">
-                                                <li><img src="assets/images/icons/location.png" alt="Icons Images"></li>
-                                                <li><img src="assets/images/icons/music.png" alt="Icons Images"></li>
-                                                <li><img src="assets/images/icons/yoga.png" alt="Icons Images"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="formful">
+                    <div class="happify-div">
+                        <div class="happify-logo"></div>
+                        <div class="happify-title">Happify</div>
+                        <div class="happify-sub-title">
+                            Admin Portal
                         </div>
-
-                        <div class="order-1 order-lg-2 col-lg-5">
-                            <div class="thumbnail">
-                                <div class="inner">
-                                    <img src="assets/images/3d/Saly-13.png" alt="Personal Portfolio Images">
-                                </div>
+                        <div class="happify-input-fields">
+                            <div class="happify-email">
+                                <input type="number" id="docid" placeholder="admin id" min="3" max="5" required />
                             </div>
+                            <div class="happify-password">
+                                <input type="password" id="docpw" placeholder="password" required /><i class="bi bi-eye-slash" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+                            </div>
+                            <script>
+                                const togglePassword = document.querySelector('#togglePassword');
+                                    const password = document.querySelector('#docpw');
+
+                                    togglePassword.addEventListener('click', function (e) {
+                                        
+                                        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                                        password.setAttribute('type', type);
+                                        
+                                        this.classList.toggle('bi-eye');
+                                    });
+                            </script>
+                            
+                        </div>
+                        <button class="happify-button" id="login_btn" type="submit" value="Login" onclick="adminauth()">Get In</button>
+                        <div class="happify-link">
+                            <a href="#">Forgot Password</a> 
                         </div>
                     </div>
                 </div>
