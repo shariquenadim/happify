@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#249ece">
-    <title>Happify || Assesment</title>
+    <title>Happify || Assessment</title>
     <link rel="stylesheet" href="assets/css/ass.css">
     <!-- FontAweome CDN Link for Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -57,16 +57,16 @@
 
     <!-- Result Box -->
     <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="info-title"><img src="assets/images/head.png" alt="favi.png" width="50" height="50"></div>
+        <div class="complete_text" >You've completed the Assessment!</div>
         <div class="score_text">
             <!-- Here I've inserted Score Result from JavaScript -->
+            <div id="stressresult"></div>
+            <div id="anxietyresult"></div>
+            <div id="depressionresult"></div>
         </div>
         <div class="buttons">
-            <button class="restart">Dashboard</button>
-            <button class="quit">Home</button>
+           <a href="dashboard.html"> <button class="restart">Proceed</button> </a> 
         </div>
     </div>
 

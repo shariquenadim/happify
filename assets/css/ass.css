@@ -307,6 +307,10 @@ footer button.show{
     font-weight: 500;
 }
 
+.score_text p{
+    color: #3ECDDB;
+}
+
 .result_box .score_text span p{
     padding: 0 4px;
     font-weight: 600;
@@ -365,3 +369,4 @@ footer button.show{
         width: 380px;
     }
   }
+

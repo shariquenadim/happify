@@ -163,12 +163,11 @@ function optionSelected(answer){
 }
 
 function showResult(){
-    console.log(anxietyscore);
-    console.log(depressionscore);
-    console.log(stressscore);
+    // console.log(anxietyscore);
+    // console.log(depressionscore);
+    // console.log(stressscore);
     
     
-
     anxietyscore=anxietyscore*2;
     depressionscore=depressionscore*2;
     stressscore=stressscore*2;
@@ -176,25 +175,92 @@ function showResult(){
     localStorage.setItem("anxietyscore",anxietyscore);
     localStorage.setItem("depressionscore",depressionscore);
     localStorage.setItem("stressscore",stressscore);
+    localStorage.setItem("astaken", 1);
+
 
 
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
-    const scoreText = result_box.querySelector(".score_text");
-    if (userScore > 3){ // if user scored more than 3
-        //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
-        scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
+
+    let depressionlevel="";
+
+    if(depressionscore<=9){
+        depressionlevel="Normal";
     }
-    else if(userScore > 1){ // if user scored more than 1
-        let scoreTag = '<span>and nice 😎, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
-        scoreText.innerHTML = scoreTag;
+    else if(depressionscore<=13 && depressionscore>= 10){
+        depressionlevel="Mild";
     }
-    else{ // if user scored less than 1
-        let scoreTag = '<span>and sorry 😐, You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
-        scoreText.innerHTML = scoreTag;
+    else if(depressionscore<=20 && depressionscore>= 14){
+        depressionlevel="Moderate";
     }
+    else if(depressionscore<=27 && depressionscore>= 21){
+        depressionlevel="Severe";
+    }
+    else if(depressionscore>= 28){
+        depressionlevel="Extremely Severe";
+    }
+
+    let stresslevel="";
+    if(stressscore<=14){
+        stresslevel="Normal";
+    }
+    else if(stressscore<=18 && stressscore>= 15){
+        stresslevel="Mild";
+    }
+    else if(stressscore<=25 && stressscore>= 19){
+        stresslevel="Moderate";
+    }
+    else if(stressscore<=33 && stressscore>= 26){
+        stresslevel="Severe";
+    }
+    else if(stressscore>= 34){
+        stresslevel="Extremely Severe";
+    }
+
+    let anxietylevel="";
+    if(anxietyscore<=7){
+        anxietylevel="Normal";
+    }
+    else if(anxietyscore<=9 && anxietyscore>= 8){
+        anxietylevel="Mild";
+    }
+    else if(anxietyscore<=14 && anxietyscore>= 10){
+        anxietylevel="Moderate";
+    }
+    else if(anxietyscore<=19 && anxietyscore>= 15){
+        anxietylevel="Severe";
+    }
+    else if(anxietyscore>= 20){
+        anxietylevel="Extremely Severe";
+    }
+
+    localStorage.setItem("anxietylevel", anxietylevel);
+    localStorage.setItem("depressionlevel", depressionlevel);
+    localStorage.setItem("stresslevel", stresslevel);
+    localStorage.setItem('token', 1);
+
+    // console.log(anxietylevel);
+    // console.log(depressionlevel);
+    // console.log(stresslevel);
+    //const score_text = document.querySelector(".score_text");
+
+    // const scoreText = result_box.querySelector(".score_text");
+    const strtext= document.getElementById("stressresult");
+    const deptext= document.getElementById("depressionresult");
+    const anxtext= document.getElementById("anxietyresult");
+
+    let depressionTag = '<span> Your depression Level is <p> '+ depressionlevel + '</P>  </span>';
+    deptext.innerHTML = depressionTag; 
+
+    let stressTag = '<span> Your Stress Level is <p> '+ stresslevel + '</P>  </span>';
+    strtext.innerHTML = stressTag;
+
+    
+    let anxietyTag = '<span> Your anxiety Level is <p> '+ anxietylevel + '</P>  </span>';
+    anxtext.innerHTML = anxietyTag; 
+
+   
 }
 
 function queCounter(index){

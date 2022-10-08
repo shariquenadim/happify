@@ -148,6 +148,21 @@
                         var email = localStorage.getItem("mail");
                         document.getElementById("email").innerHTML = email;
                     </script>
+                    <h2 style="color: black;">Patient Stress Level: <span id="stlevel">level</span></h2><br>
+                    <script>
+                        var Stresslevel = localStorage.getItem("stresslevel");
+                        document.getElementById("stlevel").innerHTML = Stresslevel;
+                    </script>
+                    <h2 style="color: black;">Patient Anxiety Level: <span id="atlevel">level</span></h2><br>
+                    <script>
+                        var anxietylevel = localStorage.getItem("anxietylevel");
+                        document.getElementById("atlevel").innerHTML = anxietylevel;
+                    </script>
+                    <h2 style="color: black;">Patient Depression Level: <span id="dplevel">level</span></h2><br>
+                    <script>
+                        var depresslevel = localStorage.getItem("depressionlevel");
+                        document.getElementById("dplevel").innerHTML = depresslevel;
+                    </script>
                 </div>
             </div>
         </div>
