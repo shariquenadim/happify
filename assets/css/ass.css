@@ -356,12 +356,12 @@ footer button.show{
 /* media queries */
 @media only screen and (max-width: 600px) {
     .info_box{
-        width: 400px;
+        width: 380px;
     }
     .quiz_box{
-        width: 400px;
+        width: 380px;
     }
     .result_box{
-        width: 400px;
+        width: 380px;
     }
   }
