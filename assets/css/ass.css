@@ -351,3 +351,17 @@ footer button.show{
     color: #fff;
     background: linear-gradient(145deg, #3ECDDB, #2c95db);
 }
+
+
+/* media queries */
+@media only screen and (max-width: 600px) {
+    .info_box{
+        width: 400px;
+    }
+    .quiz_box{
+        width: 400px;
+    }
+    .result_box{
+        width: 400px;
+    }
+  }
