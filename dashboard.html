@@ -26,6 +26,12 @@
 
     <!--js-->
     <script src="assets/js/auth.js"></script>
+    <script type="text/javascript">
+        var token = localStorage.getItem('token');
+        if(token == 0 || token == null){
+            window.location.href = "login.html";
+        }
+    </script>
 </head>
 
 <body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">

@@ -35,6 +35,7 @@ function store(){
         localStorage.setItem('name', name.value);
         localStorage.setItem('mail', mail.value);
         localStorage.setItem('pw', pw.value);
+        localStorage.setItem('token', 1);
         window.location.href = "assesment.html";
     }
 }
