@@ -19,7 +19,7 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
-
+const bottom_ques_counter = document.querySelector("footer .total_que");
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
@@ -62,7 +62,7 @@ quit_quiz.onclick = ()=>{
 }
 
 const next_btn = document.querySelector("footer .next_btn");
-const bottom_ques_counter = document.querySelector("footer .total_que");
+
 
 // if Next Que button clicked
 function nextquestion(){
@@ -265,6 +265,8 @@ function showResult(){
 
 function queCounter(index){
     //creating a new span tag and passing the question number and total question
+    console.log(index);
+    console.log(questions.length);
     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
