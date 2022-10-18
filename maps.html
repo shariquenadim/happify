@@ -26,6 +26,26 @@
 
     <!--js-->
     <script src="assets/js/auth.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="assets/js/map.js"></script>
+
+    <!-- css-->
+    <style>
+        .para{
+            padding-left: 5%;
+        }
+        .ques{
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+        .quesspan{
+            color: #3ECDDB;
+        }
+        #map {
+  height: 100%;
+}
+    </style>
 </head>
 
 <body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
@@ -142,9 +162,14 @@
                     <div class="row row--30 align-items-center">
                         <div class="order-2 order-lg-1 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30">
                             <div class="content">
-                                <h1 class="ques">What is <span> sleep quality </span> ?</h1>
-                                <span class="quesspan"></span>
-                                
+                                <div class="para">
+                                    <h1 class="ques">Places to find your <span class="quesspan"> calmness </span>!</h1>
+                                    <p class="paratext">Happify maps provides you the places where you can find peace, calmness and bonding with the nature.</p>
+                                </div>
+                                <div id="map"></div>
+                                <script
+                                    src="https://maps.googleapis.com/maps/api/js?v=weekly&key=AIzaSyAffOQQiTg9mqjJv3YRGXC9KNZIA1AiXFc&callback=initMap&libraries=marker&v=beta&region=IN&language=hi" defer>
+                                </script>
                             </div>
                         </div>
 
