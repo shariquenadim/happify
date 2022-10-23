@@ -9263,7 +9263,8 @@ figcaption {
     font-weight: 300;
     color: var(--color-lightn);
     display: inline-block;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    margin-top: 40px; }
   .slide .social-share-inner-left .social-share {
     margin: -10px -12px;
     flex-wrap: wrap; }
@@ -9327,7 +9328,8 @@ figcaption {
     font-weight: 300;
     color: var(--color-lightn);
     display: inline-block;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    margin-top: 40px; }
   .slide .skill-share-inner .skill-share {
     flex-wrap: wrap;
     margin: -10px -12px; }
