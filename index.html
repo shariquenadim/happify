@@ -26,7 +26,6 @@
 
     <!--js-->
     <script src="assets/js/auth.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@weavy/dropin-js@13.0.0/dist/weavy-dropin.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -196,7 +195,7 @@
                                                 </li>
                                                 <li class="instagram"><a href="#"><i data-feather="instagram"></i></a>
                                                 </li>
-                                                <li class="linkedin"><a href="#"><i data-feather="linkedin"></i></a>
+                                                <li class="linkedin"><a href="#" onclick="javascript:$zoho.salesiq.visitor.question('Hello Doctor!');$zoho.salesiq.chat.start();"><i data-feather="linkedin"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -226,19 +225,7 @@
         </div>
         <!-- Back to top end -->
 
-        <div id="messenger" style="height:600px;border:1px solid black;"></div>
-        <script>
-            const weavy = new Weavy({
-              url: "https://happify.weavy.io",
-              tokenFactory: async (refresh) => "wyu_roZ4TsfqlrFQKguLKhKjGcPHmDjCY21CzOGW"
-            });
-        
-            const messenger = weavy.app({
-              uid: "messenger-demo",
-              type: "messenger",    
-              container: "#messenger"
-            });
-          </script>
+        <script type="text/javascript" id="zsiqchat">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "e2b5ad0f4805b0f78a996d504b423988edb165c2b8158b732d6d4e3466ba8171", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
           
 
     </main>
