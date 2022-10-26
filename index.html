@@ -26,6 +26,8 @@
 
     <!--js-->
     <script src="assets/js/auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@weavy/dropin-js@13.0.0/dist/weavy-dropin.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
@@ -224,7 +226,20 @@
         </div>
         <!-- Back to top end -->
 
-
+        <div id="messenger" style="height:600px;border:1px solid black;"></div>
+        <script>
+            const weavy = new Weavy({
+              url: "https://happify.weavy.io",
+              tokenFactory: async (refresh) => "wyu_roZ4TsfqlrFQKguLKhKjGcPHmDjCY21CzOGW"
+            });
+        
+            const messenger = weavy.app({
+              uid: "messenger-demo",
+              type: "messenger",    
+              container: "#messenger"
+            });
+          </script>
+          
 
     </main>
 
