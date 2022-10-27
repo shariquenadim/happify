@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <meta name="description" content="Happify-A platform for Sleep, Stress, Meditation & Relax">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#249ece">
+    <title>Patient Dashboard | Happify</title>
+
+	<!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favi.png">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	
@@ -16,12 +21,12 @@
 
 	<script src="../assets/js/auth.js"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         var token = localStorage.getItem('token');
         if(token == 0 || token == null){
             window.location.href = "../login.html";
         }
-    </script>
+    </script> -->
 
 
 	<style>
@@ -88,7 +93,21 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar">
-                                Greeting
+                                <script type="text/javascript">
+									document.write();
+									var day = new Date();
+									var hr = day.getHours();
+									if (hr >= 0 && hr < 12) {
+										document.write("Lovely Morning !");
+									} else if (hr == 12) {
+										document.write("Good Noon !");
+									} else if (hr >= 12 && hr <= 17) {
+										document.write("Good Afternoon !");
+									} else {
+										document.write("Happy Evening !");
+									}
+									document.write();
+								</script>
                             </div>
                         </div>
                         <ul class="navbar-nav header-right">
@@ -131,11 +150,11 @@
 											<li>
 												<div class="timeline-panel">
 													<div class="media me-2">
-														<img alt="image" width="50" src="images/avatar/1.jpg">
+														<img alt="image" width="50" src="https://cdn-icons-png.flaticon.com/512/1154/1154448.png">
 													</div>
 													<div class="media-body">
-														<h6 class="mb-1">Dr sultads Send you Photo</h6>
-														<small class="d-block">29 July 2020 - 02:26 PM</small>
+														<h6 class="mb-1">Dr. Visakha: Sent you Photo</h6>
+														<small class="d-block">31 Oct 2022 - 10:26 AM</small>
 													</div>
 												</div>
 											</li>
@@ -146,7 +165,7 @@
 													</div>
 													<div class="media-body">
 														<h6 class="mb-1">Resport created successfully</h6>
-														<small class="d-block">29 July 2020 - 02:26 PM</small>
+														<small class="d-block">29 Oct 2022 - 02:26 PM</small>
 													</div>
 												</div>
 											</li>
@@ -157,40 +176,7 @@
 													</div>
 													<div class="media-body">
 														<h6 class="mb-1">Reminder : Treatment Time!</h6>
-														<small class="d-block">29 July 2020 - 02:26 PM</small>
-													</div>
-												</div>
-											</li>
-											 <li>
-												<div class="timeline-panel">
-													<div class="media me-2">
-														<img alt="image" width="50" src="images/avatar/1.jpg">
-													</div>
-													<div class="media-body">
-														<h6 class="mb-1">Dr sultads Send you Photo</h6>
-														<small class="d-block">29 July 2020 - 02:26 PM</small>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="timeline-panel">
-													<div class="media me-2 media-danger">
-														KG
-													</div>
-													<div class="media-body">
-														<h6 class="mb-1">Resport created successfully</h6>
-														<small class="d-block">29 July 2020 - 02:26 PM</small>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="timeline-panel">
-													<div class="media me-2 media-primary">
-														<i class="fa fa-home"></i>
-													</div>
-													<div class="media-body">
-														<h6 class="mb-1">Reminder : Treatment Time!</h6>
-														<small class="d-block">29 July 2020 - 02:26 PM</small>
+														<small class="d-block">31 Oct 2022 - 02:26 PM</small>
 													</div>
 												</div>
 											</li>
@@ -238,7 +224,7 @@
         ***********************************-->
         <div class="deznav">
             <div class="deznav-scroll">
-				<a class="add-project-sidebar btn btn-primary" href=""  data-bs-toggle="modal" data-bs-target="#addProjectSidebar" >Call +12345678</a>
+				<a class="add-project-sidebar btn btn-primary" href="tel:+919971897870">Call Doctor</a>
 				<ul class="metismenu" id="menu">
                     <li><a href="#">
 							<i class="flaticon-layout"></i>
@@ -336,8 +322,12 @@
 									<div class="profile-photo">
 										<img src="img/man.png" width="100" class="img-fluid rounded-circle" alt="">
 									</div>
-									<h3 class="mt-4 mb-1">Patient Name</h3>
-									<p class="text-muted">Patient ID</p>
+									<h3 class="mt-4 mb-1" id="name">Patient Name</h3>
+									<script>
+										var name = localStorage.getItem("name");
+										document.getElementById("name").innerHTML = name;
+									</script>
+									<p class="text-muted">ID: #2137</p>
 									<a class="btn btn-outline-primary btn-rounded mt-3 px-5" href="javascript:void(0)">Update Profile &nbsp<i class="fa fa-pencil" aria-hidden="true"></i></a>
 								</div>
 							</div>
@@ -410,7 +400,7 @@
 							<div class="card-body box-style">
 								<div class="media align-items-center">
 									<div class="media-body me-3">
-										<h2 class="count num-text text-black font-w700">12</h2>
+										<h2 class="count num-text text-black font-w700">6</h2>
 										<span class="fs-14">Unread Messages</span>
 									</div>
 									<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -427,10 +417,10 @@
 						<div class="card-body">
 							<div class="text-center">
 								<div class="profile-photo">
-									<h3>Assigned Doctor</h3>
+									<h3><u>Assigned Doctor</u></h3>
 								</div>
-								<h3 class="mt-4 mb-1">Doctor Name</h3>
-								<p class="text-muted">MBBS</p>
+								<h3 class="mt-4 mb-1">Dr. Visakha Chandela</h3>
+								<p class="text-muted">MD (Psychiatry), FRC Psych (London)</p>
 								<div class="card-footer pt-0 pb-0 text-center" >
 									<div class="row" >
 										<center>
@@ -452,10 +442,10 @@
 						<div class="card-body">
 							<div class="text-center">
 								<div class="profile-photo">
-									<h3>Assigned Therapist</h3>
+									<h3><u>Assigned Therapist</u></h3>
 								</div>
-								<h3 class="mt-4 mb-1">Therapist Name</h3>
-								<p class="text-muted">MBBS</p>
+								<h3 class="mt-4 mb-1">Ms. Urvashi</h3>
+								<p class="text-muted">Head Senior Psychologist</p>
 								<div class="card-footer pt-0 pb-0 text-center">
 									<div class="row" >
 										<center>
@@ -478,7 +468,7 @@
 
 			<div class="row">
 					
-				<div class="col-xl-3 col-xxl-3 col-sm-6">
+				<div class="col-xl-3 col-xxl-4 col-sm-6">
 					<div class="card ">
 						
 							<div class="social-graph-wrapper widget-facebook">
@@ -494,7 +484,7 @@
 
 					</div>
 				</div>
-				<div class="col-xl-3 col-xxl-3 col-sm-6">
+				<div class="col-xl-3 col-xxl-4 col-sm-6">
 					<div class="card">
 						<div class="social-graph-wrapper widget-linkedin">
 							<span class="s-icon">Depression Level</i></span>
@@ -508,7 +498,7 @@
 						</script>
 					</div>
 				</div>
-				<div class="col-xl-3 col-xxl-3 col-sm-6">
+				<div class="col-xl-3 col-xxl-4 col-sm-6">
 					<div class="card">
 						<div class="social-graph-wrapper widget-googleplus">
 							<span class="s-icon">Anxiety  Level</i></span>
@@ -522,7 +512,7 @@
 						</script>
 					</div>
 				</div>
-				<div class="col-xl-3 col-xxl-3 col-sm-6">
+				<!-- <div class="col-xl-3 col-xxl-3 col-sm-6">
 					<div class="card">
 						<div class="social-graph-wrapper widget-twitter">
 							<span class="s-icon">Mental Health</span>
@@ -531,7 +521,7 @@
 							<p>Anxiety Level</p>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 
 				
@@ -550,18 +540,18 @@
 										<div>
 											<h4 class="fs-20 mb-0  text-black mb-sm-0 mb-2">Recent Messages</h4>
 										</div>
-										<a href="contacts.html" class="btn btn-primary shadow-primary btn-rounded text-white">+ New Message</a>
+										<a href="" class="btn btn-primary shadow-primary btn-rounded text-white">+ New Message</a>
 									</div>
 									<div class="card-body">
 										<div class="media mb-3 pb-3 border-bottom">
 											<div class="image-bx me-sm-4 me-2">
-												<img src="img/hacker.png" alt="" class="rounded-circle img-1">
+												<img src="https://cdn-icons-png.flaticon.com/512/1154/1154448.png" alt="" class="rounded-circle img-1">
 												<span class="active"></span>
 											</div>
 											<div class="media-body d-sm-flex justify-content-between d-block align-items-center">
 												<div class="me-sm-3 me-0">
-													<h6 class="fs-16 font-w600 mb-sm-2 mb-0"><a href="messages.html" class="text-black">Laura Chyan</a></h6>
-													<p class="text-black mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+													<h6 class="fs-16 font-w600 mb-sm-2 mb-0"><a href="messages.html" class="text-black">Dr. Visakha</a></h6>
+													<p class="text-black mb-1">Hello, hope you are doing well. Ms. Urvasi is your assigned Therapist.</p>
 													<span class="fs-14">5m ago</span>
 												</div>
 											</div>
@@ -572,8 +562,8 @@
 											</div>
 											<div class="media-body d-sm-flex justify-content-between d-block align-items-center">
 												<div class="me-sm-3 me-0">
-													<h6 class="fs-16 font-w600 mb-sm-2 mb-0"><a href="messages.html" class="text-black">Olivia Rellaq</a></h6>
-													<p class="text-black mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+													<h6 class="fs-16 font-w600 mb-sm-2 mb-0"><a href="messages.html" class="text-black">Aman Hussain</a></h6>
+													<p class="text-black mb-1">Hello buddy, How are you?</p>
 													<span class="fs-14">41m ago</span>
 												</div>
 											</div>
@@ -585,8 +575,8 @@
 											</div>
 											<div class="media-body d-sm-flex justify-content-between d-block align-items-center">
 												<div class="me-sm-3 me-0">
-													<h6 class="fs-16 font-w600 mb-sm-2 mb-0"><a href="messages.html" class="text-black">Keanu Tipes</a></h6>
-													<p class="text-black mb-1">Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
+													<h6 class="fs-16 font-w600 mb-sm-2 mb-0"><a href="messages.html" class="text-black">Rohan Dev</a></h6>
+													<p class="text-black mb-1">Hello, I am from bihar but I stay in Mumbai.</p>
 													<span class="fs-14">25m ago</span>
 												</div>
 											</div>
@@ -602,14 +592,14 @@
 								<div class="card">
 									<div class="card-header border-0 pb-0">
 										<div class="me-2">
-											<h4 class="fs-20 mb-0 font-w500 text-black">Upcoming Projects</h4>
+											<h4 class="fs-20 mb-0 font-w500 text-black">Upcoming Meetings</h4>
 										</div>
 									</div>
 									<div class="card-body">
 										<div class="border-bottom up-project-bx pb-4 mb-4">
 											<span class="fs-16 text-primary mb-2 d-block sub-title font-w500">Yoast Esac</span>
 											<div class="d-flex">
-												<p class="font-w500 me-auto mb-2 title fs-20"><a href="post-details.html" class="text-black">Redesign Kripton Mobile App</a></p>
+												<p class="font-w500 me-auto mb-2 title fs-20"><a href="" class="text-black">Redesign Kripton Mobile App</a></p>
 												<div class="dropdown mb-3">
 													<a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -638,7 +628,7 @@
 										<div class="border-bottom up-project-bx pb-4 mb-4">
 											<span class="fs-16 text-primary mb-2 d-block sub-title font-w500">Yoast Esac</span>
 											<div class="d-flex">
-												<p class="font-w500 me-auto title mb-2 fs-20"><a href="post-details.html" class="text-black">Build Branding Persona for Etza.id</a></p>
+												<p class="font-w500 me-auto title mb-2 fs-20"><a href="" class="text-black">Build Branding Persona for Etza.id</a></p>
 												<div class="dropdown mb-3">
 													<a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -667,7 +657,7 @@
 										<div class="up-project-bx">
 											<span class="fs-16 text-primary sub-title mb-2 d-block font-w500">Yoast Esac</span>
 											<div class="d-flex">
-												<p class="font-w500 me-auto title mb-2 fs-20"><a href="post-details.html" class="text-black">Manage SEO for Eclan Company Profile</a></p>
+												<p class="font-w500 me-auto title mb-2 fs-20"><a href="" class="text-black">Manage SEO for Eclan Company Profile</a></p>
 												<div class="dropdown mb-3">
 													<a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -701,14 +691,14 @@
 									<div class="card-body">
 										<div class="sub-card bg-secondary d-flex text-white">
 											<div class="me-auto pe-2">
-												<h4 class="fs-20 mb-0 font-w600 text-white">Quick To-Do List</h4>
-												<span class="fs-14 op6 font-w200">Lorem ipsum dolor sit amet</span>
+												<h4 class="fs-20 mb-0 font-w600 text-white">Completed Meeting List</h4>
+												<span class="fs-14 op6 font-w200">Till 31st October 2022</span>
 											</div>
-											<a href="contacts.html" class="plus-icon"><i class="fa fa-plus" aria-hidden="true"></i></a>
+											<a href="" class="plus-icon"><i class="fa fa-plus" aria-hidden="true"></i></a>
 										</div>
 										<div class="sub-card">
 											<span class="text-warning sub-title fs-14">Graphic Deisgner</span>
-											<p class="font-w500"><a href="post-details.html" class="text-black">Visual Graphic for Presentation to Client</a></p>
+											<p class="font-w500"><a href="" class="text-black">Visual Graphic for Presentation to Client</a></p>
 											<div class="row justify-content-between align-items-center">
 												<div class="col-6">
 													<span>Aug 4, 2021</span>
@@ -724,7 +714,7 @@
 										</div>
 										<div class="sub-card">
 											<span class="text-primary sub-title fs-14">Database Engineer</span>
-											<p class="font-w500"><a href="post-details.html" class="text-black">Build Database Design for Fasto Admin v2</a></p>
+											<p class="font-w500"><a href="" class="text-black">Build Database Design for Fasto Admin v2</a></p>
 											<div class="row justify-content-between align-items-center">
 												<div class="col-6">
 													<span>Aug 4, 2021</span>
@@ -738,7 +728,7 @@
 										</div>
 										<div class="sub-card">
 											<span class="text-secondary sub-title fs-14">Digital Marketing</span>
-											<p class="font-w500"><a href="post-details.html" class="text-black">Make Promotional Ads for Instagram Fasto’s</a></p>
+											<p class="font-w500"><a href="" class="text-black">Make Promotional Ads for Instagram Fasto’s</a></p>
 											<div class="row justify-content-between align-items-center mb-4">
 												<div class="col-6">
 													<span>Aug 4, 2021</span>
