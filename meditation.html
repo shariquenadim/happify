@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Page</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favi.png">
+</head>
+
+<style>
+    body{
+        background-color: #ecf0f3;
+    }
+    .navcontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navright{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navleft{
+        padding-left: 40px;
+        padding-top: 30px;
+    }
+    .navright{
+        padding-right: 40px;
+        padding-top: 20px;
+    }
+    
+ .buttons{
+    display: flex;
+    margin: 20px 0;
+}
+
+ .buttons button{
+    margin: 0 10px;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #3ECDDB;
+    transition: all 0.3s ease;
+}
+
+.buttons button.restart{
+    color: #3ECDDB;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.buttons a{
+   
+    text-decoration: none;
+}
+
+
+.buttons button.restart:hover{
+    color: #fff ;
+    background: linear-gradient(145deg, #3ECDDB, #2c95db);
+}
+
+    
+
+    .heading{
+        padding-top: 10px;
+        font-size: 2rem;
+       
+        padding-left: 40px;
+    }
+
+    .contentbox{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 30px;
+        flex-wrap: wrap;
+    }
+    .videobox{
+
+        width: 23rem;
+        height: 23rem;
+        padding-bottom: 10px;
+    }
+
+    .footercontainer{
+       padding-top: 10px;
+    }
+    .footerbox{
+        text-align: center;
+    }
+
+</style>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navcontainer">
+                <div class="navleft">
+                    <img src="assets/images/head.png" alt="favi.png" width="50" height="50">
+                </div>
+                <div class="navright">
+                    <div class="logout buttons">
+                       <a href="index.html"> <button class="restart">Home</button></a>
+                    </div>
+                    <div class="back buttons">
+                        <a href="/dashboard/dashboard.html"><button class="restart">Back</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="medhead">
+        <div class="heading">Meditation video</div>
+    </section>
+
+    <section>
+        <div class="contentbox">
+            <div class="videobox">
+                <iframe width="368" height="368" src="https://www.youtube.com/embed/O-6f5wQXSu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="videobox">
+                <iframe width="368" height="368" src="https://www.youtube.com/embed/4pLUleLdwY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="videobox">
+                <iframe width="368" height="368" src="https://www.youtube.com/embed/2FGR-OspxsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footercontainer">
+            <div class="footerbox">
+                <img src="assets/images/head.png" alt="favi.png" width="50" height="50">
+            </div>
+            <div class="footerbox">
+                <p>	&#169; Happify 2022</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -47,7 +47,7 @@ function varify(){
     if(astaken == 0 && token == 1){
         window.location.href = "assesment.html";
     }else if(token == 1 && astaken == 1){
-        window.location.href = "dashboard.html";
+        window.location.href = "dashboard/dashboard.html";
     }else{
         window.location.href = "login.html";
     }
@@ -65,7 +65,7 @@ function check(){
 
     if(userName.value == storedName && userPw.value == storedPw){
         if(astaken == 1){
-            window.location.href = "dashboard.html";
+            window.location.href = "dashboard/dashboard.html";
             localStorage.setItem('token', 1);
         }else{
             window.location.href = "assesment.html";
@@ -78,7 +78,7 @@ function check(){
 //logout
 function logout(){
     localStorage.setItem('token', 0);
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }
 
 //adminauth
