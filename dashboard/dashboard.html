@@ -360,6 +360,7 @@
 											var dob = localStorage.getItem("dob");
 											var age = new Date().getFullYear() - new Date(dob).getFullYear();
 											document.getElementById("age").innerHTML = age;
+											localStorage.setItem('age', age.value);
 										</script>
 										<span class="fs-14">Age</span>
 									</div>

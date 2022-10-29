@@ -32,27 +32,29 @@
         * {
             box-sizing: border-box;
         }
-        .formful{
+
+        .formful {
             height: 100%;
-				width: 100vw;
-				overflow: hidden;
-				font-family: "Lato", sans-serif;
-				font-weight: 700;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-                padding-top: 25px;
-                padding-bottom: 25px;
+            width: 100vw;
+            overflow: hidden;
+            font-family: "Lato", sans-serif;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 25px;
+            padding-bottom: 25px;
         }
+
         .happify-div {
-            
+
             width: 440px;
             height: 830px;
-            
+
             padding: 20px 35px 15px 35px;
             border-radius: 35px;
             background: #ecf0f3;
-            
+
             box-shadow:
                 -6px -6px 6px rgba(255, 255, 255, 0.8),
                 6px 6px 6px rgba(0, 0, 0, 0.2);
@@ -65,7 +67,7 @@
             height: 100px;
             border-radius: 50%;
             margin: 0 auto;
-            
+
             box-shadow: 0px 0px 2px #5f5f5f,
                 0px 0px 0px 5px #ecf0f3,
                 8px 8px 15px #a7aaaf,
@@ -94,10 +96,10 @@
         }
 
         .happify-input-fields input {
-            
+
             border: none;
             outline: none;
-            
+
             background: none;
             font-size: 18px;
             color: #555;
@@ -111,7 +113,7 @@
         .happify-password {
             margin-bottom: 20px;
             border-radius: 20px;
-            
+
             box-shadow: inset 5px 5px 5px #cbced1,
                 inset -5px -5px 5px #ffffff;
         }
@@ -122,10 +124,10 @@
         }
 
         .happify-button {
-            
+
             outline: none;
             border: none;
-            
+
             cursor: pointer;
             width: 100%;
             height: 60px;
@@ -166,6 +168,22 @@
             text-decoration: none;
             color: #3ecddb;
             font-size: 15px;
+        }
+
+        ::placeholder {
+            opacity: 1;
+            /* Firefox */
+            padding-left: 20px;
+        }
+
+        :-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            padding-left: 20px;
+        }
+
+        ::-ms-input-placeholder {
+            /* Microsoft Edge */
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -235,7 +253,7 @@
                 <a class="rn-btn" href="index.html"><span>Home</span></a>
                 <br>
                 <a class="rn-btn" onclick="varify()"><span>Log In</span></a>
-                
+
                 <!-- social sharea area -->
                 <div class="social-share-style-1 mt--40">
                     <span class="title">find us on</span>
@@ -289,39 +307,44 @@
                         </div>
                         <div class="happify-input-fields">
                             <div class="happify-name">
-                                <input type="text" id="name" placeholder="Full Name" required/>
+                                <input type="text" id="name" placeholder="Full Name" required />
                             </div>
                             <div class="happify-dob">
-                                <input type="date" id="dob" placeholder="DOB: DD-MM-YYYY" required/>
+                                <input type="text" id="dob" placeholder="DOB: DD-MM-YYYY" onfocus="(this.type='date', this.showPicker())" onblur="(this.type='text')" required />
                             </div>
                             <div class="happify-email">
-                                <input type="email" id="mail" placeholder="Email" required/>
+                                <input type="email" id="mail" placeholder="Email" required />
                             </div>
                             <div class="happify-bp">
-                                <input type="number" id="bp" placeholder="Blood Pressure: mmHg" min="60" max="180" required/>
+                                <input type="number" id="bp" placeholder="Blood Pressure: mmHg" min="60" max="180"
+                                    required />
                             </div>
                             <div class="happify-bp">
-                                <input type="number" id="sl" placeholder="Sugar Level: mg/dL" min="97" max="240" required/>
+                                <input type="number" id="sl" placeholder="Sugar Level: mg/dL" min="97" max="240"
+                                    required />
                             </div>
                             <div class="happify-password">
-                                <input type="password" id="pw" placeholder="Password" required/><i class="bi bi-eye-slash" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+                                <input type="password" id="pw" placeholder="Password" required /><i
+                                    class="bi bi-eye-slash" id="togglePassword"
+                                    style="margin-left: -30px; cursor: pointer;"></i>
                             </div>
                             <script>
                                 const togglePassword = document.querySelector('#togglePassword');
-                                    const password = document.querySelector('#pw');
+                                const password = document.querySelector('#pw');
 
-                                    togglePassword.addEventListener('click', function (e) {
-                                        
-                                        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-                                        password.setAttribute('type', type);
-                                        
-                                        this.classList.toggle('bi-eye');
-                                    });
+                                togglePassword.addEventListener('click', function (e) {
+
+                                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                                    password.setAttribute('type', type);
+
+                                    this.classList.toggle('bi-eye');
+                                });
                             </script>
                         </div>
-                        <button class="happify-button" id="rgstr_btn" type="submit" value="Register" onclick="store()">Sign UP</button>
+                        <button class="happify-button" id="rgstr_btn" type="submit" value="Register"
+                            onclick="store()">Sign UP</button>
                         <div class="happify-link">
-                            <a href="index.html">Home</a> or <a onclick="varify()">Log In</a> 
+                            <a href="index.html">Home</a> or <a onclick="varify()">Log In</a>
                         </div>
                     </div>
                 </div>
