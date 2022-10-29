@@ -3,6 +3,9 @@ function store(){
     var name = document.getElementById('name');
     var mail = document.getElementById('mail');
     var pw = document.getElementById('pw');
+    var dob = document.getElementById('dob');
+    var bp= document.getElementById('bp');
+    var sl= document.getElementById('sl');
     var lowerCaseLetters = /[a-z]/g;
     var upperCaseLetters = /[A-Z]/g;
     var numbers = /[0-9]/g;
@@ -35,6 +38,9 @@ function store(){
         localStorage.setItem('name', name.value);
         localStorage.setItem('mail', mail.value);
         localStorage.setItem('pw', pw.value);
+        localStorage.setItem('dob', dob.value);
+        localStorage.setItem('bp', bp.value);
+        localStorage.setItem('sl', sl.value);
         localStorage.setItem('token', 1);
         window.location.href = "assesment.html";
     }

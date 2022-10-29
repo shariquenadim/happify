@@ -33,7 +33,7 @@
             box-sizing: border-box;
         }
         .formful{
-            height: 100vh;
+            height: 100%;
 				width: 100vw;
 				overflow: hidden;
 				font-family: "Lato", sans-serif;
@@ -41,11 +41,12 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+                padding: 35px;
         }
         .happify-div {
             
-            width: 430px;
-            height: 610px;
+            width: 440px;
+            height: 830px;
             
             padding: 20px 35px 15px 35px;
             border-radius: 35px;
@@ -104,6 +105,8 @@
 
         .happify-name,
         .happify-email,
+        .happify-dob,
+        .happify-bp,
         .happify-password {
             margin-bottom: 20px;
             border-radius: 20px;
@@ -285,13 +288,22 @@
                         </div>
                         <div class="happify-input-fields">
                             <div class="happify-name">
-                                <input type="text" id="name" placeholder="full name" required/>
+                                <input type="text" id="name" placeholder="Full Name" required/>
+                            </div>
+                            <div class="happify-dob">
+                                <input type="date" id="dob" placeholder="DOB: DD-MM-YYYY" required/>
                             </div>
                             <div class="happify-email">
-                                <input type="email" id="mail" placeholder="email" required/>
+                                <input type="email" id="mail" placeholder="Email" required/>
+                            </div>
+                            <div class="happify-bp">
+                                <input type="number" id="bp" placeholder="Blood Pressure: mmHg" min="60" max="180" required/>
+                            </div>
+                            <div class="happify-bp">
+                                <input type="number" id="sl" placeholder="Sugar Level: mg/dL" min="97" max="240" required/>
                             </div>
                             <div class="happify-password">
-                                <input type="password" id="pw" placeholder="password" required/><i class="bi bi-eye-slash" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+                                <input type="password" id="pw" placeholder="Password" required/><i class="bi bi-eye-slash" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
                             </div>
                             <script>
                                 const togglePassword = document.querySelector('#togglePassword');

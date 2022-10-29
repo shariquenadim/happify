@@ -21,12 +21,12 @@
 
 	<script src="../assets/js/auth.js"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         var token = localStorage.getItem('token');
         if(token == 0 || token == null){
             window.location.href = "../login.html";
         }
-    </script>
+    </script> -->
 
 
 	<style>
@@ -355,7 +355,12 @@
 							<div class="card-body box-style">
 								<div class="media align-items-center">
 									<div class="media-body me-3">
-										<h2 class="count num-text text-black font-w700">20</h2>
+										<h2 class="count num-text text-black font-w700" id="age">20</h2>
+										<script>
+											var dob = localStorage.getItem("dob");
+											var age = new Date().getFullYear() - new Date(dob).getFullYear();
+											document.getElementById("age").innerHTML = age;
+										</script>
 										<span class="fs-14">Age</span>
 									</div>
 									<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
