@@ -21,12 +21,12 @@
 
 	<script src="../assets/js/auth.js"></script>
 
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         var token = localStorage.getItem('token');
         if(token == 0 || token == null){
             window.location.href = "../login.html";
         }
-    </script> -->
+    </script>
 
 
 	<style>
@@ -378,7 +378,11 @@
 							<div class="card-body box-style">
 								<div class="media align-items-center">
 									<div class="media-body me-3">
-										<h2 class="count num-text text-black font-w700">114</h2>
+										<h2 class="count num-text text-black font-w700" id="bp">Null</h2>
+										<script>
+											var bp = localStorage.getItem("bp");
+											document.getElementById("bp").innerHTML = bp;
+										</script>
 										<span class="fs-14">Blood Pressure</span>
 									</div>
 									<img src="blood-pressure.png" alt="" width="42" height="42">
@@ -392,7 +396,11 @@
 							<div class="card-body box-style">
 								<div class="media align-items-center">
 									<div class="media-body me-3">
-										<h2 class="count num-text text-black font-w700">115</h2>
+										<h2 class="count num-text text-black font-w700" id="sl">Null</h2>
+										<script>
+											var sl = localStorage.getItem("sl");
+											document.getElementById("sl").innerHTML = sl;
+										</script>
 										<span class="fs-14">Sugar Level</span>
 									</div>
 									<img src="glucosemeter.png" alt="" width="42" height="42">
